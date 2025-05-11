@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,10 +16,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 199 66% 79%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 329 100% 91%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -30,72 +33,107 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 199 66% 79%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-b from-glowb-gradient-start to-glowb-gradient-end min-h-screen font-inter text-gray-800;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
   }
 }
+
+.bubble-bg {
+  background-image: url('https://cdn.poehali.dev/files/6c848bb6-5cc4-4c4d-a5fb-0687f95a0c99.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.star-bg {
+  background-image: url('https://cdn.poehali.dev/files/1f36aef4-89b8-4798-a8f2-7335a4bcb46f.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.glass-effect {
+  @apply bg-white bg-opacity-20 backdrop-blur-lg rounded-xl border border-white border-opacity-30 shadow-lg;
+}
+
+.hover-glow:hover {
+  @apply shadow-lg transition-all duration-300;
+  box-shadow: 0 0 15px rgba(167, 211, 239, 0.8);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+  gap: 1rem;
+}
+
+.photo-item:nth-child(4n+1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.photo-item:nth-child(8n+2) {
+  grid-column: span 2;
+}
+
+.photo-item:nth-child(8n+5) {
+  grid-row: span 2;
+}
+
+.music-visualizer {
+  display: flex;
+  align-items: flex-end;
+  height: 50px;
+  width: 100%;
+  gap: 3px;
+}
+
+.music-visualizer .bar {
+  background-color: #A7D3EF;
+  width: 10px;
+  height: 5px;
+  border-radius: 3px;
+  animation-name: sound;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes sound {
+  0% {
+    height: 5px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+
+.music-visualizer .bar:nth-child(1) { animation-duration: 1.0s; }
+.music-visualizer .bar:nth-child(2) { animation-duration: 0.5s; }
+.music-visualizer .bar:nth-child(3) { animation-duration: 1.5s; }
+.music-visualizer .bar:nth-child(4) { animation-duration: 0.8s; }
+.music-visualizer .bar:nth-child(5) { animation-duration: 1.2s; }
+.music-visualizer .bar:nth-child(6) { animation-duration: 0.6s; }
+.music-visualizer .bar:nth-child(7) { animation-duration: 1.3s; }
+.music-visualizer .bar:nth-child(8) { animation-duration: 0.9s; }
