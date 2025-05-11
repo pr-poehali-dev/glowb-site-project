@@ -1,4 +1,3 @@
-
 export interface Music {
   id: string;
   title: string;
@@ -14,5 +13,6 @@ export interface Photo {
   title: string;
   imageUrl: string;
   description: string;
+  caption?: string; // Добавлено поле для подписи к фото
   uploadDate: string;
 }

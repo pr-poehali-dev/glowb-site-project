@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="font-playfair font-bold text-lg flex items-center">
               <span className="text-glowb-blue-deep mr-1">GLOWBYTE</span>
             </div>
-            <p className="text-sm text-gray-600">Digital content management</p>
+            <p className="text-sm text-gray-600">K-pop content management</p>
           </div>
 
           <div className="flex space-x-6">
@@ -32,7 +32,7 @@ const Footer = () => {
           <p className="flex items-center justify-center">
             Made with{" "}
             <Icon name="Heart" className="h-4 w-4 mx-1 text-glowb-pink" /> for
-            content creators
+            K-pop fans
           </p>
           <p className="mt-1">
             © {new Date().getFullYear()} GLOWBYTE - All rights reserved

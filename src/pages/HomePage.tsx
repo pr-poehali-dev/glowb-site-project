@@ -21,7 +21,7 @@ const HomePage = () => {
             GLOWBYTE
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Your digital content management platform for photos and music
+            Ваша платформа для управления K-pop фотогалереей и музыкой
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -29,14 +29,14 @@ const HomePage = () => {
               className="glass-effect hover-glow px-6 py-3 rounded-lg flex items-center justify-center"
             >
               <Icon name="Music" className="mr-2 h-5 w-5" />
-              Browse Music
+              Слушать музыку
             </Link>
             <Link
               to="/photos"
               className="glass-effect hover-glow px-6 py-3 rounded-lg flex items-center justify-center"
             >
               <Icon name="Image" className="mr-2 h-5 w-5" />
-              View Photos
+              Смотреть фото
             </Link>
           </div>
         </div>
