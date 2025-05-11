@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -19,76 +18,85 @@ const queryClient = new QueryClient();
 const sampleMusic: Music[] = [
   {
     id: "1",
-    title: "Skyblue Dreams",
-    artist: "GLOWB",
-    coverUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop",
+    title: "Sample Track 1",
+    artist: "GLOWBYTE",
+    coverUrl:
+      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop",
     audioUrl: "#", // Would be a real URL in production
     duration: "3:42",
     uploadDate: new Date().toISOString(),
   },
   {
     id: "2",
-    title: "Bubble Pop",
-    artist: "GLOWB",
-    coverUrl: "https://images.unsplash.com/photo-1611601322175-ef8ec8c85426?q=80&w=2070&auto=format&fit=crop",
+    title: "Sample Track 2",
+    artist: "GLOWBYTE",
+    coverUrl:
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
     audioUrl: "#", // Would be a real URL in production
     duration: "4:15",
     uploadDate: new Date().toISOString(),
   },
   {
     id: "3",
-    title: "Star Gaze",
-    artist: "GLOWB",
-    coverUrl: "https://images.unsplash.com/photo-1614113489855-66422ad300a4?q=80&w=2062&auto=format&fit=crop",
+    title: "Sample Track 3",
+    artist: "GLOWBYTE",
+    coverUrl:
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=2070&auto=format&fit=crop",
     audioUrl: "#", // Would be a real URL in production
     duration: "3:28",
     uploadDate: new Date().toISOString(),
-  }
+  },
 ];
 
 const samplePhotos: Photo[] = [
   {
     id: "1",
-    title: "Summer Concert",
-    imageUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070&auto=format&fit=crop",
-    description: "Live stage performance from our summer tour",
+    title: "Sample Photo 1",
+    imageUrl:
+      "https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2129&auto=format&fit=crop",
+    description: "Example photo with blue gradient",
     uploadDate: new Date().toISOString(),
   },
   {
     id: "2",
-    title: "Music Video BTS",
-    imageUrl: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=2070&auto=format&fit=crop",
-    description: "Behind the scenes from our latest music video",
+    title: "Sample Photo 2",
+    imageUrl:
+      "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop",
+    description: "Abstract blue background",
     uploadDate: new Date().toISOString(),
   },
   {
     id: "3",
-    title: "Fan Meeting",
-    imageUrl: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=2070&auto=format&fit=crop",
-    description: "Meeting our amazing fans at the showcase",
+    title: "Sample Photo 3",
+    imageUrl:
+      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop",
+    description: "Blue sky with clouds",
     uploadDate: new Date().toISOString(),
   },
   {
     id: "4",
-    title: "Dance Practice",
-    imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070&auto=format&fit=crop",
-    description: "Rehearsing for the upcoming world tour",
+    title: "Sample Photo 4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop",
+    description: "Abstract blue texture",
     uploadDate: new Date().toISOString(),
   },
   {
     id: "5",
-    title: "Album Photo Shoot",
-    imageUrl: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=2070&auto=format&fit=crop",
-    description: "Working with photographers for our new album",
+    title: "Sample Photo 5",
+    imageUrl:
+      "https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?q=80&w=2026&auto=format&fit=crop",
+    description: "Soft blue background",
     uploadDate: new Date().toISOString(),
   },
   {
     id: "6",
-    title: "Award Ceremony",
-    imageUrl: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=2070&auto=format&fit=crop",
-    description: "Thank you for all the love and support!",
+    title: "Sample Photo 6",
+    imageUrl:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop",
+    description: "Technology blue background",
     uploadDate: new Date().toISOString(),
-  }
+  },
 ];
 
 const App = () => {
